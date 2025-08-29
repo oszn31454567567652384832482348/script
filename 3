@@ -1,0 +1,12 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Remote = ReplicatedStorage:WaitForChild("Remote")
+local MysteryPrizes = Remote:WaitForChild("MysteryPrizes")
+local ClaimWeeklyPrize = MysteryPrizes:WaitForChild("ClaimWeeklyPrize")
+
+while true do
+    ClaimWeeklyPrize:FireServer()
+    task.wait(0.1)
+end
